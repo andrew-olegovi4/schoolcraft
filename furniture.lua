@@ -50,7 +50,18 @@ minetest.register_node("school_furniture:teacher_chair", {
     --selection_box = {type = "fixed",fixed = {-0.35, -0.5, -0.25, 0.35, -0.4, 0.25}}
 })
 
-minetest.register_craft({output="school_furniture:teacher_chair 1",
-                         recipe= {{"","","group:wood"},
-                                  {"","group:wood","group:wood"},
-                                  {"default:steel_ingot","","default:steel_ingot"},}})
+minetest.register_craft({output="school_furniture:steel_water_cooler 1",
+                         recipe= {{"default:steel_ingot","school_furniture:iron_faucet","default:steel_ingot"},
+                                  {"default:steel_ingot","","default:steel_ingot"},
+                                  {"default:steel_ingot","default:steel_ingot","default:steel_ingot"},}})
+
+minetest.register_craftitem("school_furniture:iron_faucet", {
+	description = ("iron_faucet"),
+	inventory_image = "iron_faucet.png",
+	stack_max = 1,
+})
+
+minetest.register_craft({output="school_furniture:iron_faucet 1",
+                         recipe= {{"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
+                                  {"default:steel_ingot","","default:steel_ingot"},
+                                  {"default:steel_ingot","",""},}})
