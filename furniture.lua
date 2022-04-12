@@ -50,6 +50,24 @@ minetest.register_node("school_furniture:teacher_chair", {
     --selection_box = {type = "fixed",fixed = {-0.35, -0.5, -0.25, 0.35, -0.4, 0.25}}
 })
 
+minetest.register_craft({output="school_furniture:teacher_chair 1",
+                         recipe= {{"","","group:wood"},
+                                  {"","group:wood","group:wood"},
+                                  {"default:steel_ingot","","default:steel_ingot"},}})
+
+
+minetest.register_node("school_furniture:steel_water_cooler", {    
+    description = ("steel_water_cooler"),
+	drawtype = 'mesh',
+	mesh = 'steel_water_cooler.obj',
+    tiles = {"steel_water_cooler.png"},
+	groups = {cracky=3,oddly_breakable_by_hand=3,torch=1,not_in_creative_inventory=0},
+    selection_box = {type = 'fixed',fixed = {{-0.3, -0.5, -0.3, 0.3, 0.7, 0.3}, }},
+	collision_box = {type = 'fixed',fixed = {{-0.3, -0.5, -0.3, 0.3, 0.7, 0.3}, }},
+
+	paramtype = 'light',paramtype2 = 'facedir',
+})
+
 minetest.register_craft({output="school_furniture:steel_water_cooler 1",
                          recipe= {{"default:steel_ingot","school_furniture:iron_faucet","default:steel_ingot"},
                                   {"default:steel_ingot","","default:steel_ingot"},
