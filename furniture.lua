@@ -1,6 +1,6 @@
 minetest.register_node("school_furniture:table_teacher", {    
     description = ("table_teacher"),
-	drawtype = 'mesh',
+	drawtype = 'mesh', 
 	mesh = 'table_teacher.obj',
     tiles = {"table_teacher.png"},
 	groups = {cracky=3,oddly_breakable_by_hand=3,torch=1,not_in_creative_inventory=0},
