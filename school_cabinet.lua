@@ -15,7 +15,7 @@ local cores={
 }
 
 for i = 1, #cores, 1 do
-minetest.register_node("school_furniture:school_cabinet_"..cores[i][1], {
+minetest.register_node("schoolcraft:school_cabinet_"..cores[i][1], {
 	description = ("school_cabinet_"..cores[i][1]),
 	paramtype = "light",
 	use_texture_alpha ="clip",

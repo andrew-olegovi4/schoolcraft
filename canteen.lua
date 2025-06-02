@@ -1,4 +1,4 @@
-minetest.register_node("school_furniture:table_canteen", {    
+minetest.register_node("schoolcraft:table_canteen", {    
     description = ("table_canteen"),
 	drawtype = 'mesh',
 	mesh = 'table_canteen.obj',
@@ -10,7 +10,7 @@ minetest.register_node("school_furniture:table_canteen", {
 	paramtype = 'light',paramtype2 = 'facedir',
 })
 
-minetest.register_craft({output="school_furniture:table_canteen 1",
+minetest.register_craft({output="schoolcraft:table_canteen 1",
                          recipe= {{"group:wood","group:wood","group:wood"},
                                   {"group:wood","","group:wood"},
                                   {"default:steel_ingot","","default:steel_ingot"},}})

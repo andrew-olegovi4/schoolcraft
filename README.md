@@ -19,7 +19,7 @@
 
   <h2>📦 Blocks & Recipes</h2>
 
-  <h3>🪑 <code>school_furniture:table_canteen</code></h3>
+  <h3>🪑 <code>schoolcraft:table_canteen</code></h3>
   Classic school desk. Only comfortable for right-handers — just like real life.
   <pre>
 🪵,🪵,🪵
@@ -27,7 +27,7 @@
 🤘,"",🤘
   </pre>
 
-  <h3>👨‍🏫 <code>school_furniture:table_teacher</code></h3>
+  <h3>👨‍🏫 <code>schoolcraft:table_teacher</code></h3>
   Simple large teacher’s desk.
   <pre>
 🪵,🪵,🪵
@@ -43,7 +43,7 @@
 🤘," ",🤘
   </pre>
 
-  <h3>✋ <code>school_furniture:colored_hands</code></h3>
+  <h3>✋ <code>schoolcraft:colored_hands</code></h3>
   Painted handprints — iconic children’s school symbol.
   <pre>
 🗞️,🗞️,🗞️
@@ -54,13 +54,13 @@ Variant (colored):
 ✋, ✏️
   </pre>
 
-  <h3>📦 <code>school_furniture:school_cabinet</code></h3>
+  <h3>📦 <code>schoolcraft:school_cabinet</code></h3>
   Multiple color variants. Decorative storage units.
   <pre>
 (no crafting recipe yet)
   </pre>
 
-  <h3>💻 <code>school_furniture:programmer_block</code></h3>
+  <h3>💻 <code>schoolcraft:programmer_block</code></h3>
   A conceptual block to store or display students' code.
   <pre>
 🪵,🪨,🪵

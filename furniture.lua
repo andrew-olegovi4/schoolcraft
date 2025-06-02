@@ -1,4 +1,4 @@
-minetest.register_node("school_furniture:table_teacher", {
+minetest.register_node("schoolcraft:table_teacher", {
     description = ("table_teacher"),
 	drawtype = 'mesh',
 	mesh = 'table_teacher.obj',
@@ -10,13 +10,13 @@ minetest.register_node("school_furniture:table_teacher", {
 	paramtype = 'light',paramtype2 = 'facedir',
 })
 
-minetest.register_craft({output="school_furniture:table_teacher 1",
+minetest.register_craft({output="schoolcraft:table_teacher 1",
                          recipe= {{"group:wood","group:wood","group:wood"},
                                   {"default:steel_ingot","","default:steel_ingot"},
                                   {"default:steel_ingot","","default:steel_ingot"},}})
 
 
-minetest.register_node("school_furniture:student_chair", {
+minetest.register_node("schoolcraft:student_chair", {
     description = ("student_chair"),
     drawtype = "mesh",
     mesh = "student_chair.obj",
@@ -45,12 +45,12 @@ minetest.register_node("school_furniture:student_chair", {
     end,
 })
 
-minetest.register_craft({output="school_furniture:student_chair 1",
+minetest.register_craft({output="schoolcraft:student_chair 1",
                          recipe= {{"group:wood","group:wood","group:wood"},
                                   {"default:steel_ingot","","default:steel_ingot"},
                                   {"","",""},}})
 
-minetest.register_node("school_furniture:teacher_chair", {
+minetest.register_node("schoolcraft:teacher_chair", {
     description = ("teacher_chair"),
     drawtype = "mesh",
     mesh = "teacher_chair.obj",
@@ -79,13 +79,13 @@ minetest.register_node("school_furniture:teacher_chair", {
     end,
 })
 
-minetest.register_craft({output="school_furniture:teacher_chair 1",
+minetest.register_craft({output="schoolcraft:teacher_chair 1",
                          recipe= {{"","","group:wood"},
                                   {"","group:wood","group:wood"},
                                   {"default:steel_ingot","","default:steel_ingot"},}})
 
 
-minetest.register_node("school_furniture:steel_water_cooler", {    
+minetest.register_node("schoolcraft:steel_water_cooler", {    
     description = ("steel_water_cooler"),
 	drawtype = 'mesh',
 	mesh = 'steel_water_cooler.obj',
@@ -97,18 +97,18 @@ minetest.register_node("school_furniture:steel_water_cooler", {
 	paramtype = 'light',paramtype2 = 'facedir',
 })
 
-minetest.register_craft({output="school_furniture:steel_water_cooler 1",
-                         recipe= {{"default:steel_ingot","school_furniture:iron_faucet","default:steel_ingot"},
+minetest.register_craft({output="schoolcraft:steel_water_cooler 1",
+                         recipe= {{"default:steel_ingot","schoolcraft:iron_faucet","default:steel_ingot"},
                                   {"default:steel_ingot","","default:steel_ingot"},
                                   {"default:steel_ingot","default:steel_ingot","default:steel_ingot"},}})
 
-minetest.register_craftitem("school_furniture:iron_faucet", {
+minetest.register_craftitem("schoolcraft:iron_faucet", {
 	description = ("iron_faucet"),
 	inventory_image = "iron_faucet.png",
 	stack_max = 1,
 })
 
-minetest.register_craft({output="school_furniture:iron_faucet 1",
+minetest.register_craft({output="schoolcraft:iron_faucet 1",
                          recipe= {{"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
                                   {"default:steel_ingot","","default:steel_ingot"},
                                   {"default:steel_ingot","",""},}})
@@ -138,7 +138,7 @@ local numbers = {
 }
 
 for _, num in ipairs(numbers) do
-    minetest.register_node("school_furniture:number_"..num.name, {
+    minetest.register_node("schoolcraft:number_"..num.name, {
         description = num.description or "Цифра "..num.name,
         tiles = {num.texture.."^[transformR180"},
         inventory_image = num.texture,
@@ -191,7 +191,7 @@ for _, num in ipairs(numbers) do
             end
 
             -- Размещаем нод, если это стена
-            minetest.add_node(above, {name = "school_furniture:number_"..num.name, param2 = wdir})
+            minetest.add_node(above, {name = "schoolcraft:number_"..num.name, param2 = wdir})
 
             if not placer or not placer:is_player() or not minetest.is_creative_enabled(placer:get_player_name()) then
                 itemstack:take_item()
@@ -205,7 +205,7 @@ for _, num in ipairs(numbers) do
 -- Глобальная таблица для хранения текстов досок
 blackboard_texts = {}
 
-minetest.register_node("school_furniture:blackboard", {
+minetest.register_node("schoolcraft:blackboard", {
     description = "Доска (ПКМ для редактирования)",
     drawtype = 'mesh',
     mesh = 'blackboard.obj',
@@ -249,7 +249,7 @@ minetest.register_node("school_furniture:blackboard", {
         -- Поворачиваем доску к игроку
         param2 = (param2 + 2) % 4
 
-        minetest.set_node(pos, {name = "school_furniture:blackboard", param2 = param2})
+        minetest.set_node(pos, {name = "schoolcraft:blackboard", param2 = param2})
 
         local meta = minetest.get_meta(pos)
         local initial_text = "Нажмите ПКМ для написания текста"
@@ -275,7 +275,7 @@ minetest.register_node("school_furniture:blackboard", {
 
         minetest.show_formspec(
             clicker:get_player_name(),
-            "school_furniture:blackboard_edit_"..minetest.pos_to_string(pos),
+            "schoolcraft:blackboard_edit_"..minetest.pos_to_string(pos),
             "size[8,5]"..
             "label[0.5,0.5;Текст на доске:]"..
             "textarea[0.5,1;7,3;text;;"..minetest.formspec_escape(current_text).."]"..
@@ -290,7 +290,7 @@ minetest.register_node("school_furniture:blackboard", {
 --             return
 --         end
 --
---         if not formname:find("^school_furniture:blackboard_edit_") then
+--         if not formname:find("^schoolcraft:blackboard_edit_") then
 --             minetest.chat_send_player(sender:get_player_name(), "[Доска] форма не подходит: "..tostring(formname))
 --             return
 --         end
@@ -327,11 +327,11 @@ minetest.register_node("school_furniture:blackboard", {
 })
 
 minetest.register_on_player_receive_fields(function(player, formname, fields)
-    if not formname:find("^school_furniture:blackboard_edit_") then
+    if not formname:find("^schoolcraft:blackboard_edit_") then
         return
     end
 
-    local pos_str = formname:sub(string.len("school_furniture:blackboard_edit_") + 1)
+    local pos_str = formname:sub(string.len("schoolcraft:blackboard_edit_") + 1)
     local pos = minetest.string_to_pos(pos_str)
     if not pos then return end
 
@@ -371,7 +371,7 @@ local function load_blackboard_data()
                 local pos = minetest.string_to_pos(pos_key)
                 if pos then
                     local node = minetest.get_node_or_nil(pos)
-                    if node and node.name == "school_furniture:blackboard" then
+                    if node and node.name == "schoolcraft:blackboard" then
                         local meta = minetest.get_meta(pos)
                         meta:set_string("text", text)
                         meta:set_string("infotext", text)

@@ -1,4 +1,4 @@
-minetest.register_node("school_furniture:programmer_block",{
+minetest.register_node("schoolcraft:programmer_block",{
 	description = "programmer_block",
 	tiles = {"programmer_block.png"},
 	paramtype = "light",
@@ -45,7 +45,7 @@ minetest.register_node("school_furniture:programmer_block",{
 			return true
 	end,
 })
-minetest.register_craft({output ="school_furniture:programmer_block 1",
+minetest.register_craft({output ="schoolcraft:programmer_block 1",
 	recipe = {{"default:wood","default:stone","default:wood"},
               {"default:wood","default:steel_ingot","default:wood"},
               {"default:wood","default:wood","default:wood"},}

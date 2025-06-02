@@ -15,7 +15,7 @@ local cores={
 {"indigo", "#4b008270","default:coral_cyan","default:coral_cyan"},
 }
 
-minetest.register_node("school_furniture:colored_hands",{
+minetest.register_node("schoolcraft:colored_hands",{
     description = ("colored_hands"),
     tiles = {"colored_hands.png"},
     drawtype ="signlike",
@@ -27,7 +27,7 @@ minetest.register_node("school_furniture:colored_hands",{
     groups = {snappy = 3, flammable = 2, leaves = 1, hedge = 1},
 }) 
 
-minetest.register_craft({output = "school_furniture:colored_hands 9",
+minetest.register_craft({output = "schoolcraft:colored_hands 9",
 	recipe = {{"default:paper","default:paper","default:paper",},
               {"default:paper","flowers:dandelion_white","default:paper",},
               {"default:paper","default:paper","default:paper",},},})
@@ -35,7 +35,7 @@ minetest.register_craft({output = "school_furniture:colored_hands 9",
 
 
 for i = 1, #cores, 1 do
-    minetest.register_node("school_furniture:colored_hands"..cores[i][1],{
+    minetest.register_node("schoolcraft:colored_hands"..cores[i][1],{
     description = ("colored_hands"..cores[i][1]),
 	--wield_image = {"colored_hands.png^[multiply:"..cores[i][2]},
     tiles = {"colored_hands.png^[multiply:"..cores[i][2]},
@@ -48,7 +48,7 @@ for i = 1, #cores, 1 do
     groups = {snappy = 3, flammable = 2, leaves = 1, hedge = 1},
 
 })
-minetest.register_craft({output = "school_furniture:colored_hands"..cores[i][1].." 4",
-	recipe = {{"school_furniture:colored_hands",cores[i][3],cores[i][4]},}})
+minetest.register_craft({output = "schoolcraft:colored_hands"..cores[i][1].." 4",
+	recipe = {{"schoolcraft:colored_hands",cores[i][3],cores[i][4]},}})
 
 end
