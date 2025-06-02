@@ -3,7 +3,7 @@
   <div align="center">
     <h1>SchoolCraft</h1>
     <p><strong>A Luanti mod for building immersive school environments with classrooms, decor, and interactive elements.</strong></p>
-    <img src="https://github.com/andrewolgvch/schoolcraft/blob/main/screenshot.png?raw=true" width="600" alt="screenshot">
+    <img src="screenshot.png?raw=true" width="600" alt="screenshot">
   </div>
 
   <h2>✨ Features</h2>
