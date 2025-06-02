@@ -1,68 +1,95 @@
 <html>
 <body>
-<div>
-<h1>school_furniture</h1>
-Decorations to build schools with classrooms and create a welcoming environment for teachers and students
-<img src="https://github.com/josegamestest/school_furniture/blob/main/screenshot.jpg?raw=true">
-  canteen
-  table_teacher
-  steel_water_cooler
-  
-<h2>Types of decorations</h2>
-<h3>school_furniture:table_canteen</h3>
-They are uncomfortable model school desks that were part of childhood, only right-handers could get a little comfort in it
-<pre>
-recipe
+  <div align="center">
+    <h1>SchoolCraft</h1>
+    <p><strong>A Luanti mod for building immersive school environments with classrooms, decor, and interactive elements.</strong></p>
+    <img src="https://github.com/andrewolgvch/schoolcraft/blob/main/screenshot.png?raw=true" width="600" alt="screenshot">
+  </div>
+
+  <h2>✨ Features</h2>
+  <ul>
+    <li>Classic school furniture (canteen desks, teacher's tables, chairs)</li>
+    <li>Interactive blackboard with writable surface</li>
+    <li>Colorful educational posters: digits, math symbols, letters</li>
+    <li>Support for <code>cozy (Get Comfortable)</code> (students can sit on chairs)</li>
+    <li>School cabinets and hallway decorations (e.g., water cooler)</li>
+    <li>Programmer's block — for storing code inside the game</li>
+    <li>Ready-to-use assets for classroom maps (e.g., Soviet-style school layout)</li>
+  </ul>
+
+  <h2>📦 Blocks & Recipes</h2>
+
+  <h3>🪑 <code>school_furniture:table_canteen</code></h3>
+  Classic school desk. Only comfortable for right-handers — just like real life.
+  <pre>
 🪵,🪵,🪵
 🪵,"",🪵
 🤘,"",🤘
-</pre>
+  </pre>
 
-<h2>steel_water_cooler</h2>
- And a decorative water machine for hallways
-large industrial model
-<pre>
-🤘,:iron_faucet,🤘,
-🤘," ",🤘,
-🤘," ",🤘,
-</pre>
- 
-<h3>school_furniture:table_teacher</h3>  
-A big table for the teacher, simple
+  <h3>👨‍🏫 <code>school_furniture:table_teacher</code></h3>
+  Simple large teacher’s desk.
+  <pre>
+🪵,🪵,🪵
+🤘,"",🤘
+🤘,"",🤘
+  </pre>
 
-recipe
-<pre>
-🪵,🪵,🪵,
-🤘,"",🤘,
-🤘,"",🤘,
- </pre>
- 
-<h3>school_furniture:colored_hands #colored</h3>
-Hands drawn and colored the same in children's schools.
-<pre>
-recipe
-🗞️,🗞️,🗞️,
-🗞️,🌻,🗞️,
-🗞️,🗞️,🗞️,
-        
-recipe colored
+  <h3>🚰 <code>steel_water_cooler</code></h3>
+  Decorative industrial hallway water cooler.
+  <pre>
+🤘,:iron_faucet,🤘
+🤘," ",🤘
+🤘," ",🤘
+  </pre>
+
+  <h3>✋ <code>school_furniture:colored_hands</code></h3>
+  Painted handprints — iconic children’s school symbol.
+  <pre>
+🗞️,🗞️,🗞️
+🗞️,🌻,🗞️
+🗞️,🗞️,🗞️
+
+Variant (colored):
 ✋, ✏️
-</pre>
+  </pre>
 
-<h3>Programmer Block</h3>
-Adds a block that can save the codes of players studying programming.
-<pre>
-recipe
-🪵,🪨,🪵,
-🪵,🪩,🪵,
-🪵,🪵,🪵,
-</pre>
- 
-<h3>school_cabinet</h3>
-  Different colors of school cabinets for decoration
-<pre>
-  no recipes now
-</pre>
-</div>
+  <h3>📦 <code>school_furniture:school_cabinet</code></h3>
+  Multiple color variants. Decorative storage units.
+  <pre>
+(no crafting recipe yet)
+  </pre>
+
+  <h3>💻 <code>school_furniture:programmer_block</code></h3>
+  A conceptual block to store or display students' code.
+  <pre>
+🪵,🪨,🪵
+🪵,🪩,🪵
+🪵,🪵,🪵
+  </pre>
+
+  <h2>📚 Educational Use</h2>
+  <p>SchoolCraft was created as part of a pedagogical project to design meaningful and interactive lessons for informatics classes in Grades 5–6. It enables the teacher to recreate a realistic digital classroom with elements that foster engagement and spatial thinking.</p>
+
+  <ul>
+    <li>Write on the board to explain concepts</li>
+    <li>Use posters for math and logic tasks</li>
+    <li>Design scenarios where students can move, interact, and solve problems</li>
+    <li>Combine with cozy (Get Comfortable) API for sitting and class behavior simulation</li>
+  </ul>
+
+  <h2>🛠️ Dependencies</h2>
+  <ul>
+    <li><a href="https://github.com/minetest-mods/ts_furniture">cozy (Get Comfortable)</a></li>
+    <li>default Minetest game</li>
+  </ul>
+
+  <h2>🎓 License</h2>
+  <p>This mod is a fork of <code><a href="https://github.com/josegamestest/school_furniture">school_furniture</a></code>, extended for educational use. All assets and code are available under open-source licenses unless otherwise stated.</p>
+
+  <hr>
+  <div align="center">
+    <strong>Build your virtual school. Teach with creativity. 🏫</strong>
+  </div>
 </body>
 </html>
